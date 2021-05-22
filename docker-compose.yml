@@ -40,7 +40,7 @@ spin-front50:
   container_name: spin-front50
   environment:
     - "JAVA_OPTS=-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=2"
-  image: gcr.io/spinnaker-marketplace/front50:0.26.1-20201106170304
+  image: gcr.io/spinnaker-marketplace/front50:0.19.0-20190904130744
   volumes:
     - ./config/front50.yml:/opt/spinnaker/config/front50.yml
     - ./config/spinnaker.yml:/opt/spinnaker/config/spinnaker.yml
@@ -99,7 +99,7 @@ spin-redis:
     - "6379:6379"
 spin-rosco:
   container_name: spin-rosco
-  image: gcr.io/spinnaker-marketplace/rosco:0.22.0-20201009170017
+  image: gcr.io/spinnaker-marketplace/rosco:0.14.0-20190904130744
   volumes:
     - ./config/rosco.yml:/opt/spinnaker/config/rosco.yml
     - ./config/spinnaker.yml:/opt/spinnaker/config/spinnaker.yml
